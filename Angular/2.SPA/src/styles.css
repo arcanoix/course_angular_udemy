@@ -6,6 +6,10 @@ body {
   padding-bottom: 50px;
 }
 
+.logo_image {
+  height: 120px;
+}
+
 /* animaciones */
 .animated {
   -webkit-animation-duration: 1s;
