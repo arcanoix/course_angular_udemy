@@ -14,4 +14,14 @@ export class AppComponent {
   a= 0.234;
 
   salario = 1234.5;
+
+  heroe = {
+    nombre:"gustavo",
+    clave:"programdor",
+    edad: 33,
+      direccion: {
+        calle: "bolivar",
+        casa: "840"
+      }
+  }
 }
