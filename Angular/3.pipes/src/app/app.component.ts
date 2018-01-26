@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nombre = 'fernando';
+  nombre = 'Gustavo';
   nombre2 = 'gustAVo adolfO herRera aular';
   arreglo = [1,2,3,4,5,6,7,8,9,10];
 
@@ -34,5 +34,7 @@ export class AppComponent {
 
     //para el pipe personalizado domseguro
     video = 'vxB5a8Z34Ho';
+
+    activar:boolean = true;
 
 }
