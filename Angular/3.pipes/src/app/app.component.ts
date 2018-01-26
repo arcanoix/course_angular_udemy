@@ -32,4 +32,7 @@ export class AppComponent {
 
     fecha = new Date();
 
+    //para el pipe personalizado domseguro
+    video = 'vxB5a8Z34Ho';
+
 }
