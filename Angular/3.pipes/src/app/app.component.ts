@@ -23,5 +23,13 @@ export class AppComponent {
         calle: "bolivar",
         casa: "840"
       }
-  }
+  };
+
+  valorDePromesa = new Promise( (resolve, reject) => {
+
+          setTimeout( () => resolve('llego la data'), 3500 );
+
+
+  })
+
 }
