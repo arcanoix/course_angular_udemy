@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders} from "@angular/common/http";
 
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class SpotifyService {
 
@@ -17,7 +19,11 @@ export class SpotifyService {
         'authorization':'Bearer BQASTOcVYmUyVUn2W0nsMMcvHM-78f7OIGAxTrMBpYBPDSBknAD0lreA-u3QeC9ZLOKffQI4sYuzuAHf8CejTsUZICFbCxZN8Fu8DWv8q3GUMCMgRfaCAsSCt5CzDmlK-eEy-cB7GwDh0nvgzTMSaccQA4Yi5m04Z-NvfnaUjWRDgYA'
     });
 
-      return this.http.get(url, { headers }) //esto es un observable
+      return this.http.get(url, { headers }) // esto es un observable
+                 .map( (resp: any) => { // operador map obtiene la respuesta de la peticion de un observable
+                   this.artistas = resp.artists.items;
+                   return this.artistas;
+                 });
 
 
   }
