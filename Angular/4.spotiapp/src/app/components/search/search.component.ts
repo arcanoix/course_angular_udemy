@@ -10,11 +10,13 @@ import { SpotifyService } from '../../services/spotify.service';
 export class SearchComponent {
 
   constructor(public _spotify: SpotifyService) {
+
       this._spotify.getArtistas() // <-- se encuentra dentro del _spotify (servicio)
-        .subscribe( resp => { // subscribe es para procesar la informacion
+        .subscribe( artistas => { // subscribe es utilizado solo para ejecutar logica especializada solo en dicho componente
           console.log("informacion lista");
-          console.log(resp);
-        })
+          console.log(artistas);
+        });
+        
   }
 
 
